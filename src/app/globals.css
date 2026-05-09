@@ -1,0 +1,174 @@
+@import "tailwindcss";
+@variant dark (&:where(.dark, .dark *));
+
+* {
+  font-family: "Times New Roman", Times, serif;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ─── CSS Custom Properties ─── */
+:root {
+  --bg: #fafafa;
+  --card: #ffffff;
+  --alt: #f5f5f5;
+  --fg: #111111;
+  --fg-2: #555555;
+  --fg-3: #999999;
+  --border: #e8e8e8;
+  --border-2: #bbbbbb;
+  --line: #e0e0e0;
+  --ghost: rgba(0, 0, 0, 0.04);
+  --shadow-sm: 0 1px 4px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 6px 24px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.14);
+  --scrollbar: #cccccc;
+}
+
+.dark {
+  --bg: #0a0a0a;
+  --card: rgba(255, 255, 255, 0.07);
+  --alt: rgba(255, 255, 255, 0.04);
+  --fg: #f5f5f5;
+  --fg-2: #cccccc;
+  --fg-3: #888888;
+  --border: rgba(255, 255, 255, 0.18);
+  --border-2: rgba(255, 255, 255, 0.45);
+  --line: rgba(255, 255, 255, 0.18);
+  --ghost: rgba(255, 255, 255, 0.04);
+  --shadow-sm: 0 1px 6px rgba(0, 0, 0, 0.5);
+  --shadow-md: 0 6px 28px rgba(0, 0, 0, 0.6);
+  --shadow-lg: 0 12px 48px rgba(0, 0, 0, 0.7);
+  --scrollbar: rgba(255, 255, 255, 0.35);
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  overflow-x: hidden;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--scrollbar); }
+
+/* ─── Scroll Progress ─── */
+#scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: var(--fg);
+  z-index: 100;
+  transition: width 0.1s linear;
+}
+
+/* ─── Utility classes ─── */
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+}
+.card:hover {
+  box-shadow: var(--shadow-md);
+  border-color: var(--border-2);
+}
+
+.section-alt { background: var(--alt); }
+
+.ghost-num {
+  position: absolute;
+  top: -2rem;
+  left: -0.5rem;
+  font-size: 8rem;
+  font-weight: 900;
+  color: var(--ghost);
+  line-height: 1;
+  pointer-events: none;
+  user-select: none;
+  letter-spacing: -0.05em;
+}
+
+.divider { background: var(--line); }
+
+/* ─── Cursor blink ─── */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+.cursor-blink { animation: blink 1s step-end infinite; }
+
+/* ─── Glitch effect ─── */
+@keyframes glitch-1 {
+  0%, 100% { clip-path: inset(0 0 100% 0); transform: translate(0); }
+  10% { clip-path: inset(25% 0 60% 0); transform: translate(-4px, 2px); }
+  20% { clip-path: inset(70% 0 10% 0); transform: translate(4px, -1px); }
+  30% { clip-path: inset(45% 0 45% 0); transform: translate(-2px, 3px); }
+}
+@keyframes glitch-2 {
+  0%, 100% { clip-path: inset(0 0 100% 0); transform: translate(0); }
+  15% { clip-path: inset(60% 0 20% 0); transform: translate(4px, -2px); }
+  25% { clip-path: inset(10% 0 75% 0); transform: translate(-3px, 1px); }
+  35% { clip-path: inset(80% 0 5% 0); transform: translate(2px, -3px); }
+}
+.glitch-wrap { position: relative; display: inline-block; }
+.glitch-wrap:hover .g1 { animation: glitch-1 0.45s steps(1) 1; }
+.glitch-wrap:hover .g2 { animation: glitch-2 0.45s steps(1) 0.05s 1; }
+.g1, .g2 { position: absolute; top: 0; left: 0; width: 100%; pointer-events: none; }
+.g1 { color: rgba(59, 130, 246, 0.7); left: 2px; }
+.g2 { color: var(--fg); opacity: 0.5; left: -2px; }
+
+/* ─── AI accent (monochrome) ─── */
+.ai-glow { box-shadow: 0 0 0 1px rgba(0,0,0,0.08), 0 4px 24px rgba(0,0,0,0.06); }
+.dark .ai-glow { box-shadow: 0 0 0 1px rgba(255,255,255,0.18), 0 4px 24px rgba(255,255,255,0.06); }
+.ai-border { border-color: rgba(0,0,0,0.15) !important; }
+.dark .ai-border { border-color: rgba(255,255,255,0.25) !important; }
+.ai-bg { background: rgba(0, 0, 0, 0.03); }
+
+/* ─── Dark overrides for Tailwind utility classes ─── */
+.dark .bg-white { background: var(--card) !important; }
+.dark .bg-gray-50 { background: var(--alt) !important; }
+.dark .bg-gray-100 { background: rgba(255,255,255,0.09) !important; }
+.dark .bg-gray-900 { background: #f5f5f5 !important; color: #111 !important; }
+.dark .text-gray-900 { color: #f5f5f5 !important; }
+.dark .text-gray-800 { color: #ebebeb !important; }
+.dark .text-gray-700 { color: #d8d8d8 !important; }
+.dark .text-gray-600 { color: #c0c0c0 !important; }
+.dark .text-gray-500 { color: #a0a0a0 !important; }
+.dark .text-gray-400 { color: #808080 !important; }
+.dark .text-gray-300 { color: #606060 !important; }
+.dark .border-gray-100 { border-color: rgba(255,255,255,0.1) !important; }
+.dark .border-gray-200 { border-color: rgba(255,255,255,0.18) !important; }
+.dark .border-gray-300 { border-color: rgba(255,255,255,0.28) !important; }
+.dark .border-black { border-color: #f5f5f5 !important; }
+.dark .border-gray-900 { border-color: #f5f5f5 !important; }
+.dark .shadow-sm { box-shadow: var(--shadow-sm) !important; }
+.dark .shadow-md { box-shadow: var(--shadow-md) !important; }
+.dark .shadow-lg { box-shadow: var(--shadow-lg) !important; }
+.dark input,
+.dark textarea {
+  background: rgba(255,255,255,0.07) !important;
+  color: #f5f5f5 !important;
+  border-color: rgba(255,255,255,0.22) !important;
+}
+.dark input::placeholder,
+.dark textarea::placeholder { color: rgba(255,255,255,0.35) !important; }
+.dark input:focus,
+.dark textarea:focus { border-color: rgba(255,255,255,0.6) !important; }
+.dark .amber-warning {
+  background: rgba(245,158,11,0.12) !important;
+  border-color: rgba(245,158,11,0.4) !important;
+  color: rgba(245,158,11,0.9) !important;
+}
+
+/* ─── Print styles for CV page ─── */
+@media print {
+  #scroll-progress, nav, .no-print { display: none !important; }
+  body { background: white !important; color: black !important; }
+  .print-section { page-break-inside: avoid; }
+}
