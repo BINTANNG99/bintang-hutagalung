@@ -24,7 +24,7 @@ const EXPERIENCES: Record<string, Experience[]> = {
         "Managed daily store operations including cashier transactions, sales recording, and monthly reporting.",
         "Monitored incoming and outgoing goods, reconciling stock data against physical product counts.",
         "Maintained inventory availability through warehouse coordination, display arrangement, and restock checks.",
-        "Supported sales through social media management and product content creation.",
+        "Supported sales through social media management, product content creation, and direct customer communication.",
       ],
     },
     {
@@ -34,8 +34,9 @@ const EXPERIENCES: Record<string, Experience[]> = {
       period: "Feb 2022 - Jan 2024",
       bullets: [
         "Prepared computers, software, and technical lab equipment before practical sessions.",
-        "Guided students during hands-on sessions, assisting with programming tools and resolving technical issues.",
-        "Maintained lab readiness through software installation and network maintenance.",
+        "Guided students during hands-on sessions, assisting with programming tools and resolving technical issues throughout the learning process.",
+        "Maintained lab readiness through software installation, device inspection, and network maintenance.",
+        "Coordinated with lecturers and the lab team to ensure practical sessions ran smoothly and the learning environment remained stable.",
       ],
     },
     {
@@ -44,8 +45,9 @@ const EXPERIENCES: Record<string, Experience[]> = {
       city: "Batu Bara",
       period: "August 2024",
       bullets: [
-        "Provided technical support for office devices to keep village administrative services running.",
-        "Handled computer and network troubleshooting, including connectivity checks and device configuration.",
+        "Provided technical support for office devices to keep village administrative services running smoothly.",
+        "Handled computer and network troubleshooting, including connectivity checks, device configuration, and basic issue resolution.",
+        "Assisted with village website maintenance through content updates and functionality checks to keep public information accessible.",
       ],
     },
     {
@@ -54,8 +56,10 @@ const EXPERIENCES: Record<string, Experience[]> = {
       city: "Binjai",
       period: "October - November 2024",
       bullets: [
-        "Supported administrative tasks through data entry and document filing.",
-        "Prepared daily work devices and resolved minor technical issues on computers and peripherals.",
+        "Supported administrative tasks through data entry, document filing, and patient file organization for easier retrieval.",
+        "Prepared daily work devices through installation, configuration, and readiness checks.",
+        "Resolved minor technical issues on computers and operational support equipment.",
+        "Collaborated with unit staff to ensure administrative and technical needs were met in a timely manner.",
       ],
     },
   ],
@@ -69,7 +73,7 @@ const EXPERIENCES: Record<string, Experience[]> = {
         "Menangani operasional harian toko, mulai dari transaksi kasir, pencatatan penjualan, hingga penyusunan rekap dan laporan.",
         "Memantau arus barang masuk dan keluar serta mencocokkan data stok dengan kondisi fisik produk di toko.",
         "Menjaga ketersediaan barang melalui koordinasi pengambilan stok dari gudang dan penataan display.",
-        "Mendukung penjualan melalui pengelolaan media sosial dan pembuatan konten produk.",
+        "Mendukung penjualan melalui pengelolaan media sosial, pembuatan konten produk, dan komunikasi dengan pelanggan secara langsung maupun digital.",
       ],
     },
     {
@@ -78,9 +82,10 @@ const EXPERIENCES: Record<string, Experience[]> = {
       city: "Medan",
       period: "Feb 2022 - Jan 2024",
       bullets: [
-        "Menyiapkan komputer, software, dan kebutuhan teknis laboratorium sebelum praktikum.",
-        "Mendampingi mahasiswa saat praktik dan membantu penggunaan tools pemrograman.",
-        "Menjaga kesiapan laboratorium melalui instalasi software dan pemeliharaan jaringan.",
+        "Menyiapkan komputer, software, dan kebutuhan teknis laboratorium sebelum praktikum berlangsung.",
+        "Mendampingi mahasiswa saat praktik dengan membantu penggunaan tools pemrograman dan menyelesaikan kendala teknis selama pembelajaran.",
+        "Menjaga kesiapan laboratorium melalui instalasi software yang dibutuhkan, pemeriksaan perangkat, dan pemeliharaan jaringan.",
+        "Berkoordinasi dengan dosen dan tim laboratorium agar kegiatan praktikum berjalan lancar dan lingkungan belajar tetap stabil.",
       ],
     },
     {
@@ -89,8 +94,9 @@ const EXPERIENCES: Record<string, Experience[]> = {
       city: "Batu Bara",
       period: "Agustus 2024",
       bullets: [
-        "Memberikan dukungan teknis untuk perangkat kerja kantor agar layanan administrasi desa tetap berjalan.",
-        "Menangani troubleshooting komputer, jaringan, dan konfigurasi perangkat.",
+        "Memberikan dukungan teknis untuk perangkat kerja kantor agar layanan administrasi desa tetap berjalan dengan baik.",
+        "Menangani troubleshooting komputer dan jaringan, termasuk pengecekan konektivitas, konfigurasi perangkat, dan penanganan gangguan dasar.",
+        "Membantu pemeliharaan website desa melalui pembaruan konten dan pengecekan fungsi agar informasi publik tetap terakses.",
       ],
     },
     {
@@ -99,8 +105,10 @@ const EXPERIENCES: Record<string, Experience[]> = {
       city: "Binjai",
       period: "Oktober - November 2024",
       bullets: [
-        "Mendukung pekerjaan administrasi unit melalui input data dan pengarsipan dokumen.",
-        "Menyiapkan perangkat kerja harian dan membantu menyelesaikan kendala teknis ringan.",
+        "Mendukung pekerjaan administrasi unit melalui input data, pengarsipan dokumen, dan penataan file pasien agar lebih rapi dan mudah ditelusuri.",
+        "Menyiapkan perangkat kerja harian dengan melakukan instalasi, konfigurasi, dan pengecekan kesiapan penggunaan.",
+        "Membantu menyelesaikan kendala teknis ringan pada komputer dan perangkat pendukung operasional.",
+        "Bekerja sama dengan staf unit untuk memastikan kebutuhan administrasi dan teknis dapat dipenuhi tepat waktu.",
       ],
     },
   ],
